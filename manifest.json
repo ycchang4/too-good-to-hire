@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Too Good To Hire",
+  "version": "1.0.0",
+  "description": "Detects fake and suspicious job postings on LinkedIn.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/jobs/*"],
+      "js": ["analyzer.js", "banner.js","content.js"]
+    }
+  ]
+}
